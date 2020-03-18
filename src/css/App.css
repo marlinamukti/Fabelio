@@ -1,0 +1,90 @@
+.bg-blue{
+  background-color: #106CC8 !important;
+  /* opacity: 0.8; */
+}
+
+.search-name{
+  height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 100%;
+  width: 100%;
+  border: 0 none;
+  padding: 0 10px;
+  background-color: transparent;
+  color: rgba(255,255,255,.7);
+  background-clip: padding-box;
+  border-color: rgba(255,255,255,.2);
+  border-bottom: 1px solid white;
+}
+
+.search-name::placeholder{
+  color: rgba(255,255,255,.9);
+  font-size: larger;
+}
+
+.divSearchContainer{
+  /* border: 1px solid black; */
+  position: relative;
+  margin-top: 20px;
+}
+
+.divSearchFurstyle{
+  /* border: 1px solid black; */
+  float: left;
+  display: block;
+  width: 50%;
+}
+
+.divSearchDelivTime{
+  position: absolute;
+  right: 0;
+  /* border: 1px solid black; */
+  /* display: block; */
+}
+
+.button-deliv-search{
+  width: 400px;
+  background-color: white !important;
+  color: black !important;
+  text-align: left !important;
+}
+
+.container-prod1{
+  display: inline-block;
+  height: 40px;
+}
+
+.product-name{
+  float: left;
+  display: flex;
+  font-size: 14pt;
+  color: black;
+  font-weight: bold;
+}
+
+.product-price{
+  color: #ff9100;
+  font-weight: bold;
+  display: block;
+  text-align: right;
+  margin-right: 0px;
+}
+
+.product-desc{
+  text-align: justify;
+  font-size: 11pt;
+}
+
+.product-style{
+  color: #3355ff;
+  font-size: 11pt;
+}
+
+.product-delivday{
+  color: #3355ff;
+  text-align: right;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 11pt;
+}
