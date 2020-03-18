@@ -1,8 +1,8 @@
 import React from 'react';
 import '../css/App.css';
 import '../../node_modules/uikit/dist/css/uikit.min.css';
-import { products } from './Products'
-import { furniture_style } from './Furniture_Style'
+// import { products } from './Products'
+// import { furniture_style } from './Furniture_Style'
 
 var initState = {
   delivery_time:[
@@ -12,6 +12,9 @@ var initState = {
       {id:4, value:"more", checked:false, daymin:31, daymax:5000}
   ]
 }
+
+var products
+var furniture_style
 
 class App extends React.Component{
   constructor(props){
@@ -24,11 +27,31 @@ class App extends React.Component{
   }
 
   componentDidMount(){
-    this.setState({
-      products:products,
-      furniture_style: furniture_style,
-      delivery_time: initState.delivery_time
+    fetch("http://www.mocky.io/v2/5c9105cb330000112b649af8")
+    .then(data => data.json())
+    .then(data => {
+      // console.log(data.furniture_styles)
+      let furnitureStyleCopy = []
+      data.furniture_styles.forEach(fur => {
+        furnitureStyleCopy.push({label:fur, value:fur, checked:false})
+      })
+
+      products = data.products
+      furniture_style = furnitureStyleCopy
+
+      this.setState({
+        products: data.products,
+        furniture_style: furnitureStyleCopy,
+        delivery_time: initState.delivery_time
+      })
     })
+
+
+    // this.setState({
+    //   // products:products,
+    //   // furniture_style: furniture_style,
+    //   delivery_time: initState.delivery_time
+    // })
   }
 
   onSearchFurName = (event) => {
@@ -61,7 +84,7 @@ class App extends React.Component{
   }
 
   oncheckedFurStyle = (fur) => {
-    console.log(fur.value)
+    // console.log(fur.value)
     let furniture_styleCopy = [...this.state.furniture_style]
     let productsCopy = [...products]
     let index = furniture_styleCopy.findIndex( f => f.label === fur.label)
