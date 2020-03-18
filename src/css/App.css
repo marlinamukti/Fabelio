@@ -33,7 +33,7 @@
   /* border: 1px solid black; */
   float: left;
   display: block;
-  width: 50%;
+  width: 49%;
 }
 
 .divSearchDelivTime{
@@ -41,10 +41,11 @@
   right: 0;
   /* border: 1px solid black; */
   /* display: block; */
+  width: 49%;
 }
 
 .button-deliv-search{
-  width: 400px;
+  /* width: 400px; */
   background-color: white !important;
   color: black !important;
   text-align: left !important;

@@ -184,7 +184,7 @@ class App extends React.Component{
                     
                     
                     <div className="divSearchDelivTime">
-                        <button className="uk-button uk-button-default button-deliv-search" type="button" tabIndex="-1">
+                        <button className="uk-button uk-button-default uk-width-1-1 button-deliv-search" type="button" tabIndex="-1">
                             <span >Delivery Time</span>
                             <span style={{float: "right", marginTop: "10px"}} data-uk-icon="icon: triangle-down"></span>
                         </button>
