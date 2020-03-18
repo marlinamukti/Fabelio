@@ -1,0 +1,11 @@
+{
+    "root": "dist/",
+    "routes": {
+        "/**": "index.html"
+    },
+    "headers":{
+        "/**":{
+            "Content-Secrity-Policy-Report-Only": "default-src https: 'unsafe-inline' 'unsafe-eval'; report-uri https://logger.anditakaesar.com"
+        }
+    }
+}
